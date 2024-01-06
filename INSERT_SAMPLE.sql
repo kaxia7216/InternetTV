@@ -31,12 +31,12 @@ INSERT INTO programs (program_name, discription, timezone_id, channel_id, genre_
     ('Documentary Special', 'Special documentary presentation', 5, 5, 5);
 
 -- Episodesテーブルのサンプルデータ
-INSERT INTO episodes (episode_name, episode_no, season_no, discription, video_time, release_date, program_id) VALUES
-    ('The Beginning', 1, 1, 'First episode of the series', '00:30:00', '2024-01-01', 4),
-    ('Laugh Out Loud', 2, 1, 'Comedy skit extravaganza', '00:30:00', '2024-02-01', 2),
-    ('Sports Insight', 3, 2, 'In-depth sports coverage', '00:30:00', '2024-03-01', 3),
-    ('Tears of Destiny', 4, 1, 'Emotional drama unfolds', '00:30:00', '2024-04-01', 1),
-    ('The Unknown World', 5, 2, 'Exploring a fascinating subject', '00:30:00', '2024-05-01', 5);
+INSERT INTO episodes (episode_name, episode_total, episode_no, season_no, discription, video_time, release_date, program_id) VALUES
+    ('The Beginning', 1, 1, 1, 'First episode of the series', '00:30:00', '2024-01-01', 4),
+    ('Laugh Out Loud', 2, 2, 1, 'Comedy skit extravaganza', '00:30:00', '2024-02-01', 2),
+    ('Sports Insight', 2, 1, 2, 'In-depth sports coverage', '00:30:00', '2024-03-01', 3),
+    ('Tears of Destiny', 3, 3, 1, 'Emotional drama unfolds', '00:30:00', '2024-04-01', 1),
+    ('The Unknown World', 2, 1, 2, 'Exploring a fascinating subject', '00:30:00', '2024-05-01', 5);
 
 -- Seasonsテーブルのサンプルデータ
 INSERT INTO seasons (program_id, seasons_total) VALUES
@@ -53,4 +53,3 @@ INSERT INTO view (channel_id, episode_id, view_count) VALUES
     (3, 3, 200),
     (1, 4, 120),
     (2, 5, 180);
-
