@@ -44,6 +44,7 @@ CREATE TABLE episodes (
     FOREIGN KEY (program_id) REFERENCES programs (id),
     id INT NOT NULL AUTO_INCREMENT,
     episode_name CHAR(50) NOT NULL,
+    episode_total INT NOT NULL,
     episode_no INT NOT NULL,
     season_no INT NOT NULL,
     discription TEXT,
