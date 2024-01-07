@@ -55,5 +55,5 @@ SELECT prog.program_name, cha.channel_name, epi.release_date, ti.start_time, ti.
  INNER JOIN genres AS ge
     ON prog.genre_id = ge.id
  WHERE prog.genre_id = '1' 
-   AND epi.release_date > (SELECT CURRENT_DATE) 
-   AND epi.release_date < (SELECT DATE_ADD(CURRENT_DATE(),INTERVAL '7' DAY));
+   AND epi.release_date >= (SELECT CURRENT_DATE) 
+   AND epi.release_date <= (SELECT DATE_ADD(CURRENT_DATE(),INTERVAL '7' DAY));
